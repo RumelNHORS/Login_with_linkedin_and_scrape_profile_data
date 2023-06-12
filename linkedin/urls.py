@@ -19,7 +19,6 @@ from django.urls import path, include
 from django.contrib.auth import views as auth_views
 from myapp import views
 
-from myapp.views import convert_json_to_model
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,7 +31,5 @@ urlpatterns = [
     path('sc_log/', views.linkedin_auth, name='sc_log'),
     path('scrape/', views.linkedin_auth, name='scrape'),
 
-
-    path('convert/', views.convert_json_to_model, name='convert_json_to_model'),
 
 ]

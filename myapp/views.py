@@ -100,27 +100,5 @@ def linkedin_auth(request):
         return JsonResponse({'error': 'Failed to authenticate with LinkedIn.'})
 
 ########################
-from django.shortcuts import render
-from .models import MyModel
-import json
 
-def convert_json_to_model(request):
-    json_file_path = 'rumel.json'
-
-    with open(json_file_path) as f:
-        json_data = json.load(f)
-
-    model_instances = []
-    for item in json_data:
-        model_instance = MyModel(
-            field1=item['field1'],
-            field2=item['field2'],
-            # Set other fields accordingly
-        )
-        model_instances.append(model_instance)
-
-    # Save the model instances to the database
-    MyModel.objects.bulk_create(model_instances)
-
-    return render(request, 'conversion_done.html')
 

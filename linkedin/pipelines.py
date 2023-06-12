@@ -12,7 +12,7 @@ class MysqlDemoPipeline(object):
             host = 'localhost',
             user = 'root',
             password = '1234',
-            database = 'testdb'
+            database = 'linkedin'
         )
 
         ## Create cursor, used to execute commands
