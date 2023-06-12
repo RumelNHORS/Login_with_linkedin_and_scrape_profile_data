@@ -29,6 +29,6 @@
 from django.db import models
 
 class MyModel(models.Model):
-    name = models.TextField()
+    field1 = models.TextField()
     field2 = models.IntegerField()
     # Add more fields as needed

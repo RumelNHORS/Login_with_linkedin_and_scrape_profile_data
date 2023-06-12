@@ -113,7 +113,7 @@ def convert_json_to_model(request):
     model_instances = []
     for item in json_data:
         model_instance = MyModel(
-            name=item['name'],
+            field1=item['field1'],
             field2=item['field2'],
             # Set other fields accordingly
         )
